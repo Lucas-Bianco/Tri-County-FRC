@@ -1,100 +1,96 @@
-/*=-=-=-=-=-=-=-=-=--
-Colors and Fonts
-Change color here to change the color of the website. 
-Change font-family here to change the font of the website.
-=-=-=-=-=-=-=-=-=--*/
+
+
+
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Sans+3:wght@400;700&display=swap");
+/* =-=-=-=-=-=-=-=-=--
+   Color and fonts. Changes here will affect the whole site.
+=-=-=-=-=-=-=-=-=-- */
 :root {
-    --navy:#222f61;         /*logo Navy*/
-    --navy-dark:#161f45;        /*footer background*/
-    --gold:#f4d15a;             /*logo gold*/
-    --text:#3d4352;             /*normal paragraph text*/
-    --grey-bg:#f3f4f7;          /*light grey band behind sections*/
-    --line:#d9dce6;             /*Thing Borders*/
-    --white:#ffffff;
+  --navy: #222f61;        /* logo navy  */
+  --navy-dark: #161f45;   /* footer */
+  --gold: #f4d15a;        /* logo gold*/
+  --text: #3d4352;        /* normal paragraph text */
+  --grey-bg: #f3f4f7;     /* light grey band behind sections */
+  --line: #d9dce6;        /* thin borders */
+  --white: #ffffff;
 
-    --heading-font: 'League Gothic', Arial, sans-serif;
-    --body-font: 'Source Sans 3', Arial, sans-serif;
-
+  --heading-font: "League Gothic", "Arial Narrow", sans-serif;
+  --body-font: "Source Sans 3", Arial, sans-serif;
 }
 
 
-/*=-=-=-=-=-=-=-=-=--
-Global RESETS
-=-=-=-=-=-=-=-=-=--*/
+/* =-=-=-=-=-=-=-=-=--
+   GLOBAL RESETS
+=-=-=-=-=-=-=-=-=-- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*padding no longer makes boxes longer than I want*/
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   
 }
 
 img {
-    max-width: 100%;            /*prevents images from being larger than their container (Done for phones)*/
-    height: block;
+  max-width: 100%;          /* images never overflow on phones */
+  display: block;
 }
 
-/*=-=-=-=-=-=-=-=-=--
-Body and text
-=-=-=-=-=-=-=-=-=--*/
+
+/* =-=-=-=-=-=-=-=-=--
+   BODY AND TEXT
+=-=-=-=-=-=-=-=-=-- */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    color: var(--text);
-    font-family: var(--body-font);
-    font-size: 18px;
-    line-height: 1.6;
-
+  min-height: 100vh;
+  display: flex;             
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.6;
 }
-
 
 main {
-    flex: 1; /*makes main take up all the space it can, pushing footer to bottom*/
+  flex: 1;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--navy);
-    margin-bottom: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1;
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  font-weight: 400;          /* League Gothic is already bold-looking */
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--navy);
+  margin-bottom: 16px;
 }
 
-
-h1 { font-size: 88px;}
-h2 { font-size: 48px;}
-h3 { font-size: 30px;}
-h4 { font-size: 24px;}
-h5 { font-size: 20px;}
-h6 { font-size: 18px;}
+h1 { font-size: 88px; }
+h2 { font-size: 48px; }
+h3 { font-size: 30px; }
 
 p {
-    margin-bottom: 16px;
-    max-width: 65ch; /*makes paragraphs not too wide for reading*/
+  margin-bottom: 16px;
+  max-width: 65ch;          
 }
 
 a {
-    color: var(--navy);
-    text-decoration: none;
+  color: var(--navy);
 }
-ul.list {           /*unordered list with bullets*/
-    margin: 0 0 16px 22px;
+
+ul.list {                  
+  margin: 0 0 16px 22px;
 }
 
 
-/*=-=-=-=-=-=-=-=-=--
-Navigation Bar
-=-=-=-=-=-=-=-=-=--*/
+/* =-=-=-=-=-=-=-=-=--
+   NAVIGATION BAR
+=-=-=-=-=-=-=-=-=-- */
 nav {
-    background-color: var(--navy);
-    border-bottom: 4px solid var(--gold);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: var(--navy);
+  border-bottom: 4px solid var(--gold);
+  position: sticky;          /* nav stays at the top while you scroll */
+  top: 0;
+  z-index: 10;
 }
+
 nav ul {
   width: 100%;
   max-width: 1200px;
@@ -104,9 +100,11 @@ nav ul {
   justify-content: flex-end;
   align-items: center;
 }
+
 nav li {
   height: 64px;
 }
+
 nav a {
   height: 100%;
   padding: 0 22px;
@@ -119,12 +117,17 @@ nav a {
   font-weight: 700;
   letter-spacing: 2px;
 }
+
 nav a:hover {
   color: var(--gold);
 }
+
+
 nav a.active {
   color: var(--gold);
 }
+
+
 nav li:first-child {
   margin-right: auto;
 }
@@ -143,10 +146,9 @@ nav li:first-child {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: var(--white);
-}
+  color: var(--white);}
 
-/* The hamburger and X icons are drawn in the page's link colour */
+
 nav svg {
   fill: var(--white);
 }
@@ -165,7 +167,7 @@ nav svg {
   background-color: var(--navy);
   border-left: 4px solid var(--gold);
   box-shadow: -10px 0 20px rgba(0, 0, 0, 0.3);
-  display: none;             /* hidden until the script adds the "open" class */
+  display: none;          
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -185,7 +187,7 @@ nav svg {
 
 
 /* =-=-=-=-=-=-=-=-=--
-   MENU BUTTON 
+   MENU BUTTON (HAMBURGER ICON)
 =-=-=-=-=-=-=-=-=-- */
 .menu-button {
   display: none;             /* only shown on small screens, below */
@@ -194,6 +196,7 @@ nav svg {
 
 /* =-=-=-=-=-=-=-=-=--
    PAGE LAYOUT
+   
 =-=-=-=-=-=-=-=-=-- */
 .container {
   max-width: 1200px;
@@ -205,7 +208,7 @@ nav svg {
   padding: 80px 0;
 }
 
-/* Navy band (like 1538's black bands) */
+
 .section-dark {
   background-color: var(--navy);
   color: #d5d9ea;
@@ -218,10 +221,10 @@ nav svg {
   color: var(--white);
 }
 
+
 .section-grey {
   background-color: var(--grey-bg);
 }
-
 .title-bar {
   display: flex;
   align-items: center;
@@ -245,6 +248,7 @@ nav svg {
   align-items: center;
 }
 
+/* Three cards in a row. Stacks on phones. */
 .three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -274,8 +278,6 @@ nav svg {
 /* =-=-=-=-=-=-=-=-=--
    SMALL PIECES
 =-=-=-=-=-=-=-=-=-- */
-
-/* Small gold label, e.g. "2027 Rookie Season" */
 .tag {
   display: inline-block;
   background-color: var(--gold);
@@ -291,6 +293,7 @@ nav svg {
 .title-bar .tag {
   margin-bottom: 0;
 }
+
 
 .button {
   display: inline-block;
@@ -310,7 +313,6 @@ nav svg {
   color: var(--white);
 }
 
-/* Filled gold button - use for the ONE most important action on a page */
 .button-gold {
   background-color: var(--gold);
   border-color: var(--gold);
@@ -323,7 +325,7 @@ nav svg {
   color: var(--navy);
 }
 
-/* On navy bands, outline buttons turn white */
+
 .section-dark .button {
   border-color: var(--white);
   color: var(--white);
@@ -345,7 +347,6 @@ nav svg {
   gap: 12px;
 }
 
-/* White box with a gold top edge */
 .card {
   background-color: var(--white);
   border: 1px solid var(--line);
@@ -356,6 +357,7 @@ nav svg {
 .card p:last-child {
   margin-bottom: 0;
 }
+
 
 .photo-placeholder {
   aspect-ratio: 4 / 3;
@@ -370,14 +372,13 @@ nav svg {
   text-align: center;
 }
 
-/* Yellow highlight on text you still need to write.
-   Search the site for class="todo" before launch - none should be left. */
+
 .todo {
   background-color: #fff3c4;
   outline: 1px dashed #b08900;
 }
 
-/* Colour squares on the branding page */
+
 .swatches {
   display: flex;
   flex-wrap: wrap;
@@ -402,97 +403,200 @@ code {
 }
 
 
-/*=-=-=-=-=-=-=-=-=--
-Footer
-=-=-=-=-=-=-=-=-=--*/
+/* =-=-=-=-=-=-=-=-=--
+   FOOTER
+=-=-=-=-=-=-=-=-=-- */
 footer {
   background-color: var(--navy-dark);
-  color: #c3c8de;
-  padding: 40px 0;
-  font-size: 14px;
-}
-
-footer a {
-  color: var(--white);
+  border-top: 4px solid var(--gold);
+  color: #aeb4cf;            /* soft grey-blue text */
+  font-size: 15px;
 }
 
 footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
   list-style: none;
-  margin-top: 16px;
+}
 
+footer a {
+  color: #d5d9ea;
+  text-decoration: none;
+}
 
+footer a:hover {
+  color: var(--gold);
+}
+
+/* Four columns*/
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 48px;
+  padding-top: 64px;
+  padding-bottom: 48px;
+}
+
+/* Logo + team name in the first column */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo img {
+  height: 56px;
+  width: auto;
+}
+
+.footer-logo span {
+  font-family: var(--heading-font);
+  font-size: 34px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.footer-about {
+  max-width: 34ch;
+  margin-bottom: 24px;
+}
+
+/* Small gold column titles */
+.footer-heading {
+  font-family: var(--body-font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+footer address {
+  font-style: normal;       
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Round social media buttons */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: var(--white);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.social-links a:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
 }
 
 
-
-
-
-
-
-
-
-
-/*=-=-=-=-=-=-=-=-=--
-Responsive Design Stuff
-=-=-=-=-=-=-=-=-=--*/
-
-
-/*for small phones*/
-@media (max-width: 800px){
-    .hideOnMobile {
-        display: none;
-    }   
-    .menu-button {
-        display: block;
-    }
-
-
-
-    h1 { font-size: 60px;}
-    h2 {font-size: 40px;}
-    h3 {font-size: 32px;}
-
-    .section {
-        padding: 60px 0;
-    }
-    .hero {
-        padding: 65px 0;
-    }
-
-    .two-columns , .three-columns{
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-   .hero-logo {
-        max-width: 280px;
-    }
-
-
-
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
-
-/*for very small phones*/
-@media (max-width: 500px){
-    .sidebar {
-        width: 100%;
-    }
-    .logo-container span {
-        font-size: 25px;
-    }
-
-
-
-
-
+.social-links .solid {
+  fill: currentColor;
+  stroke: none;
 }
 
 
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px 0;
+  font-size: 13px;
+  color: #8a91b0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.footer-legal {
+  flex: 1;
+  min-width: 260px;
+}
 
 
+/* =-=-=-=-=-=-=-=-=--
+   RESPONSIVE DESIGN
+=-=-=-=-=-=-=-=-=-- */
 
+/* Tablets and phones (below 800px wide) */
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;           /* hide normal nav links */
+  }
+  .menu-button {
+    display: block;          /* show hamburger icon */
+  }
+
+  h1 { font-size: 60px; }
+  h2 { font-size: 40px; }
+
+  .section { padding: 56px 0; }
+  .hero { padding: 64px 0; }
+
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;   /* stack everything */
+  }
+
+  .hero-logo {
+    max-width: 240px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;   /* 2 x 2 footer columns */
+    gap: 40px 32px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;              /* brand column spans the full width */
+  }
+}
+
+/* Very small phones (below 500px wide) */
+@media (max-width: 500px) {
+  .sidebar {
+    width: 100%;             /* sidebar fills the screen */
+  }
+  .logo-container span {
+    font-size: 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;       /* one column on small phones */
+  }
+}
