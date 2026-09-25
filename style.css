@@ -1,195 +1,52 @@
-/* ===========================
-   GLOBAL RESETS
-=========================== */
+/*=-=-=-=-=-=-=-=-=--
+Colors and Fonts
+Change color here to change the color of the website. 
+Change font-family here to change the font of the website.
+=-=-=-=-=-=-=-=-=--*/
+:root {
+    --navy:#222f61;         /*logo Navy*/
+    --navy-dark:#161f45;        /*footer background*/
+    --gold:#f4d15a;             /*logo gold*/
+    --text:#3d4352;             /*normal paragraph text*/
+    --grey-bg:#f3f4f7;          /*light grey band behind sections*/
+    --line:#d9dce6;             /*Thing Borders*/
+    --white:#ffffff;
+
+    --heading-font: 'League Gothic', Arial, sans-serif;
+    --body-font: 'Source Sans 3', Arial, sans-serif;
+
+}
+
+
+/*=-=-=-=-=-=-=-=-=--
+Global RESETS
+=-=-=-=-=-=-=-=-=--*/
 * {
-  margin: 0;           /* Removes default browser margins */
-  padding: 0;          /* Removes default browser padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*padding no longer makes boxes longer than I want*/
+
 }
 
-/* ===========================
-   BODY STYLING
-=========================== */
+img {
+    max-width: 100%;            /*prevents images from being larger than their container (Done for phones)*/
+    height: block;
+}
+
+/*=-=-=-=-=-=-=-=-=--
+Body and text
+=-=-=-=-=-=-=-=-=--*/
 body {
-  min-height: 100vh;   /* Ensures body fills at least the full viewport height */
-  
-  /* Background image setup */
-  background-color: #0d1e30; /* Sets NASA rocket image as background */
-  background-size: cover;       /* Scales the image to cover entire background */
-  background-repeat: no-repeat; /* Prevents image tiling */
-  background-position: center;  /* Centers the image on the page */
-  
-  /* Font styling */
-  font-family: Arial, sans-serif, 'Times New Roman', Times, serif;
-}
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    color: var(--text);
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 1.6;
 
-
-/* ===============================
-    Button Styling
-===============================*/
-.button1 { /*Base Styling*/
-  background-color: #007bff; 
-  color: white; 
-  padding: 12px 24px; 
-  border: none; 
-  border-radius: 8px; /* Slightly rounded corners */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px; /*  font size */
-  font-weight: bold; /* Bold text  */
-  cursor: pointer; /* shows interactable */
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /*  hover effects */
-}
-/*On Button Hover*/
-.button1:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /*Shadow*/
-  transform: translateY(-2px); 
-}
-
-.button1:active {
-  background-color: #004085; /* Even darker blue when we click it */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /*  pressing */
-  transform: translateY(0); /* Returns to og position */
-}
-/* ===========================
-   NAVIGATION BAR STYLING
-=========================== */
-nav {
-  background-color: white;                           /* White navigation background */
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);        /* Subtle shadow for depth */
-}
-
-/* Navigation list layout */
-nav ul {
-  width: 100%;                                       /* Make nav take full width */
-  list-style: none;                                  /* Remove bullets from list items */
-  display: flex;                                     /* Flexbox for horizontal layout */
-  justify-content: flex-end;                         /* Push items to the right side */
-  align-items: center;                               /* Vertically center nav items */
-}
-
-/* Each navigation list item */
-nav li {
-  height: 50px;                                      /* Set consistent nav item height */
-}
-
-/* Navigation links */
-nav a {
-  height: 100%;                                      /* Link fills full height of <li> */
-  padding: 0 30px;                                   /* Space around text inside links */
-  text-decoration: none;                             /* Remove underlines */
-  display: flex;                                     /* Allows vertical centering */
-  align-items: center;                               /* Centers link text vertically */
-  color: black;    
-  font-weight: bold;                                  /* Link text color */
-}
-
-/* Hover effect for links */
-nav a:hover {
-  background-color: #d6d6d6;                         /* Light gray background on hover */
-}
-
-/* The very first <li> (usually logo/title) */
-nav li:first-child {
-  margin-right: auto;                                /* Pushes all other items to right */
-}
-
-/* Logo and brand name container */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;                                         /* Space between logo and text */
-}
-
-.logo-container img {
-  height: 35px;                                      /* Logo height */
-  width: auto;                                       /* Maintain aspect ratio */
-}
-
-.logo-container span {
-  font-weight: 600;                                  /* Semi-bold text */
-  font-size: 16px;                                   /* Text size */
-  color: black;
-}
-
-/* ===========================
-   SIDEBAR (MOBILE NAV)
-=========================== */
-.sidebar {
-  position: fixed;                                   /* Fixed position (stays while scrolling) */
-  top: 0;                                            /* Start from top of the page */
-  right: 0;                                          /* Positioned on the right edge */
-  height: 100vh;                                     /* Full viewport height */
-  width: 250px;                                      /* Sidebar width */
-  
-  /* Glass-like style */
-  background-color: rgb(255, 255, 255);      /* Semi-transparent white background (Disabled Currently) */
-  backdrop-filter: blur(12px);                       /* Blurred glass effect */
-  
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.432);       /* Shadow to separate from page */
-  
-  font-weight: bold ;
-  
-  list-style: none;                                  /* No bullets */
-  display: none;                                     /* Hidden by default (shown via JS) */
-  flex-direction: column;                            /* Stack links vertically */
-  align-items: flex-start;                           /* Align links to left inside sidebar */
-  justify-content: flex-start;                       /* Start content from top */
-}
-
-/* Sidebar list items take full width */
-.sidebar li {
-  width: 100%;
-}
-
-/* Sidebar links stretch to full width */
-.sidebar a {
-  width: 100%;
-}
-
-/* ===========================
-   MENU BUTTON (HAMBURGER ICON)
-=========================== */
-.menu-button {
-  display: none;                                     /* Hidden by default (only visible on mobile) */
-}
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-
-/* For smaller screens (below 1000px wide) */
-@media (max-width: 1000px) {
-  .hideOnMobile {
-    display: none;                                   /* Hide normal nav links */
-  }
-  .menu-button {
-    display: block;                                  /* Show hamburger icon */
-  }
-}
-
-/* For very small screens (below 500px wide) */
-@media (max-width: 500px) {
-  .sidebar {
-    width: 100%;                                     /* Sidebar takes full screen width */
-  }
 }
 
 
 
-
-
-main {
-      max-width: 1000px;       /*  centered on diff sizes */
-      margin: 40px auto;      /* centers the block horizontally with top/bottom space */
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0);
-    }
-
-h1, h2, h3, data {
-      margin: 10px 0;
-      text-align: center;     /* centers all headers */
-    }
