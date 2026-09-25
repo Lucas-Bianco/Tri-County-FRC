@@ -13,7 +13,7 @@ body {
   min-height: 100vh;   /* Ensures body fills at least the full viewport height */
   
   /* Background image setup */
-  background: url('images/hexagonbackground.jpg'); /* Sets NASA rocket image as background */
+  background-color: #0d1e30; /* Sets NASA rocket image as background */
   background-size: cover;       /* Scales the image to cover entire background */
   background-repeat: no-repeat; /* Prevents image tiling */
   background-position: center;  /* Centers the image on the page */
@@ -180,3 +180,16 @@ nav li:first-child {
 
 
 
+main {
+      max-width: 1000px;       /*  centered on diff sizes */
+      margin: 40px auto;      /* centers the block horizontally with top/bottom space */
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0);
+    }
+
+h1, h2, h3, data {
+      margin: 10px 0;
+      text-align: center;     /* centers all headers */
+    }
