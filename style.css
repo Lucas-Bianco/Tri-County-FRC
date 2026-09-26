@@ -622,7 +622,8 @@ footer address {
   h1 { font-size: 60px; }
   h2 { font-size: 40px; }
 
-  .section { padding: 56px 0;   .page-header { padding: 48px 0 40px; } }
+  .section { padding: 56px 0; }  
+  .page-header { padding: 48px 0 40px; }   
   .hero { padding: 64px 0; }
 
   .two-columns,
