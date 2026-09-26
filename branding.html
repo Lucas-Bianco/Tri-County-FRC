@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Page title as it appears in the browser tab -->
-  <title>Branding Guidelines</title>
+  <title>Branding</title>
 
   <!--Favicon -->
   <link rel="icon" type="X" href="assets/Tri-CountyLogo.png">
@@ -54,9 +54,16 @@
       <!-- These replicate the main navbar links but are shown in the sidebar on mobile -->
 
 
-      <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="branding.html">Branding Guidelines</a></li>
+      <li><a href="seasons.html">Seasons</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li class="sidebar-sub"><a href="calendar.html">Calendar</a></li>
+      <li class="sidebar-sub"><a href="branding.html">Branding</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li class="sidebar-sub"><a href="become-a-sponsor.html">Become a Sponsor</a></li>
+      <li><a href="join.html">Join</a></li>
     </ul>
 
     </ul>
@@ -75,9 +82,29 @@
            These are visible on desktop but hidden on smaller screens (CSS: .hideOnMobile {display:none}) -->
 
 
-      <li class="hideOnMobile"><a href="index.html">Home</a></li>
-        <li class="hideOnMobile"><a href="about.html">About</a></li>
-        <li class="hideOnMobile"><a href="branding.html">Branding</a></li>
+<li class="hideOnMobile"><a href="index.html">Home</a></li>
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+<li class="hideOnMobile"><a href="seasons.html">Seasons</a></li>
+<li class="hideOnMobile"><a href="news.html">News</a></li>
+
+      <!-- DROPDOWN: parent link is a real page; s -->
+      <li class="hideOnMobile has-dropdown">
+        <a href="resources.html">Resources <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="branding.html">Branding</a></li>
+        </ul>
+      </li>
+
+      <li class="hideOnMobile has-dropdown">
+        <a href="sponsors.html">Sponsors <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="sponsors.html">Our Sponsors</a></li>
+          <li><a href="become-a-sponsor.html">Become a Sponsor</a></li>
+        </ul>
+      </li>
+
+      <li class="hideOnMobile"><a href="join.html">Join</a></li>
 
 
       <!-- ===========================
@@ -119,11 +146,11 @@
       sidebar.style.display = 'none'
     }
   </script>
-    <main>
+     <main>
 
 
         
-<h1>Branding Guidelines</h1>
+<h1>Branding</h1>
 
     </main>
 

@@ -54,9 +54,16 @@
       <!-- These replicate the main navbar links but are shown in the sidebar on mobile -->
 
 
-      <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="branding.html">Branding Guidelines</a></li>
+      <li><a href="seasons.html">Seasons</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li class="sidebar-sub"><a href="calendar.html">Calendar</a></li>
+      <li class="sidebar-sub"><a href="branding.html">Branding</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li class="sidebar-sub"><a href="become-a-sponsor.html">Become a Sponsor</a></li>
+      <li><a href="join.html">Join</a></li>
     </ul>
 
     </ul>
@@ -75,9 +82,29 @@
            These are visible on desktop but hidden on smaller screens (CSS: .hideOnMobile {display:none}) -->
 
 
-      <li class="hideOnMobile"><a href="index.html">Home</a></li>
-        <li class="hideOnMobile"><a href="about.html">About</a></li>
-        <li class="hideOnMobile"><a href="branding.html">Branding</a></li>
+<li class="hideOnMobile"><a href="index.html">Home</a></li>
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+<li class="hideOnMobile"><a href="seasons.html">Seasons</a></li>
+<li class="hideOnMobile"><a href="news.html">News</a></li>
+
+      <!-- DROPDOWN: parent link is a real page; s -->
+      <li class="hideOnMobile has-dropdown">
+        <a href="resources.html">Resources <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="branding.html">Branding</a></li>
+        </ul>
+      </li>
+
+      <li class="hideOnMobile has-dropdown">
+        <a href="sponsors.html">Sponsors <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="sponsors.html">Our Sponsors</a></li>
+          <li><a href="become-a-sponsor.html">Become a Sponsor</a></li>
+        </ul>
+      </li>
+
+      <li class="hideOnMobile"><a href="join.html">Join</a></li>
 
 
       <!-- ===========================
@@ -239,44 +266,14 @@
                 <div class="footer-brand">
                     <a href="index.html" class="footer-logo"><img src="assets/Tri-CountyLogo.png" alt="Tri-County FRC Logo"><span>Tri-County FRC</span></a>
                     <a class="footer-about">A first Robotics Competition team at Tri-County RVTHS in Franklin, MA.</a>
-                    
                     <!--Social media links-->
                     <ul class="social-links">
-                        <li>
-                            <a href="https://www.instagram.com/tricountyfrc/" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="solid" cx="17.5" cy="6.5" r="1.2"/></svg>
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.youtube.com/@tri-countyfrc" aria-label="Youtube">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/TriCountyFRC" aria-label="X">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
-                            </a>
-                        </li>
-                        
-
-                           <li>
-                            <a href="https://www.tiktok.com/@tricountyfrc" aria-label="TikTok">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/></svg>
-                            </a>
-                        </li>
-
-                           <li>
-                            <a href="#" aria-label="Facebook">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/></svg>
-                            </a>
-                            </li>
-                           <li>
-                            <a href="https://github.com/Lucas-Bianco/Tri-County-FRC" aria-label="Github">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/></svg>
-                            </a>
-                        </li>
+                            <li><a href="https://www.instagram.com/tricountyfrc/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="solid" cx="17.5" cy="6.5" r="1.2"/></svg></a></li>
+                            <li><a href="https://www.youtube.com/@tri-countyfrc" aria-label="Youtube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a></li>
+                            <li><a href="https://x.com/TriCountyFRC" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a></li>
+                            <li><a href="https://www.tiktok.com/@tricountyfrc" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/></svg></a></li>
+                            <li><a href="https://www.facebook.com/tricountyfrc" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/></svg></a></li>
+                            <li><a href="https://github.com/Lucas-Bianco/Tri-County-FRC" aria-label="Github"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/></svg></a></li>
                     </ul>
             </div>
                 <!-- #2 column -->
@@ -290,16 +287,12 @@
             </div>
 
                 <!-- #3 column -->
-            <div>
-                <h2 class="footer-heading">Get Involved</h2>
-                <ul class="footer-links">
+            <div><h2 class="footer-heading">Get Involved</h2><ul class="footer-links">
                     <li><a href="sponsors.html">Sponsor Us</a></li>
                     <li><a href="mentors.html">Become a Mentor</a></li>
                     <li><a href="join.html">Join Our Team</a></li>
                 </ul>
             </div>
-
-
                 <!-- #4 column where can u find us -->
             <div>
                 <h2 class="footer-heading">Contact</h2>
@@ -308,20 +301,14 @@
                     147 Pond St, Franklin, MA 02038<br>
                     <a href="mailto:tcroboticssocial@gmail.com">tcroboticssocial@gmail.com</a>
                 </address>
-
                 <!-- Footer copyright notice (Bottom Bar)-->
-
                 <div class="footer-bottom">
                     <div class="container">
                         <p>&copy; 2026 Tri-County FRC</p>
                         <p class="footer-legal">FIRST&reg; and FIRST Robotics Competition&reg; are registered trademarks of FIRST&reg; (www.firstinspires.org), which is not overseeing or involved in the operation of this website in any ways, shape, or form.</p>
                     </div>
-
-
-
-
-
-
+                </div>
+            </div>
     </main>
 </body>
 </html>
