@@ -755,3 +755,198 @@ footer address {
 .tier-faq {
   align-items: start;
 }
+.tier-picker {
+      background-color: var(--white);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--gold);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+
+    .tier-picker label {
+      display: block;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .tier-picker input {
+      width: 100%;
+      accent-color: var(--navy);
+    }
+
+    .tier-result {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .tier-result strong {
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    /* Table scrolls sideways on phones instead of squishing */
+    .tier-chart-wrap {
+      overflow-x: auto;
+      background-color: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .tier-chart {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    .tier-chart th,
+    .tier-chart td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+      vertical-align: middle;
+      transition: background-color 0.15s, opacity 0.15s;
+    }
+
+    /* Benefit names on the left. Sticky so they stay put while scrolling on phones. */
+    .tier-chart tbody th {
+      position: sticky;
+      left: 0;
+      background-color: var(--white);
+      text-align: left;
+      color: var(--navy);
+      font-weight: 700;
+      width: 22%;
+    }
+
+    /* Tier headers */
+    .tier-chart thead th {
+      background-color: var(--navy);
+      color: var(--white);
+      font-family: var(--heading-font);
+      font-weight: 400;
+      font-size: 30px;
+      text-transform: uppercase;
+      line-height: 1;
+      padding: 20px 16px;
+      cursor: pointer;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .tier-chart thead th:first-child {
+      cursor: default;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+
+    .tier-chart thead th span {
+      display: block;
+      font-family: var(--body-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-top: 6px;
+    }
+
+    .tier-chart .no {
+      color: #a3a9bf;
+    }
+
+    .tier-chart .yes {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* Hovered row */
+    .tier-chart tbody tr:hover td,
+    .tier-chart tbody tr:hover th {
+      background-color: #fbf6df;
+    }
+
+    /* Hovered or selected tier column */
+    .tier-chart .col-hover {
+      background-color: #fdf3c8;
+    }
+
+    .tier-chart thead th.col-hover {
+      background-color: var(--navy-dark);
+    }
+
+    /* Fade the text of unselected tiers (color, not opacity, so tooltips stay solid) */
+    .tier-chart.has-selection td:not(.col-selected):not(.col-hover) {
+      color: #b4b9cc;
+    }
+
+    .tier-chart td.col-selected {
+      background-color: #fdf3c8;
+      box-shadow: inset 2px 0 0 var(--gold), inset -2px 0 0 var(--gold);
+    }
+
+    .tier-chart thead th.col-selected {
+      background-color: var(--gold);
+      color: var(--navy);
+    }
+
+    .tier-chart thead th.col-selected span {
+      color: var(--navy);
+    }
+
+    /* Tooltips: hover or tab to a cell with data-tip */
+    .tier-chart [data-tip] {
+      position: relative;
+      cursor: help;
+      text-decoration: underline dotted #8a92b2;
+      text-underline-offset: 4px;
+    }
+
+    .tier-chart [data-tip]::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% - 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: 220px;
+      padding: 8px 12px;
+      background-color: var(--navy);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      text-align: left;
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      z-index: 2;
+    }
+
+    .tier-chart [data-tip]:hover::after,
+    .tier-chart [data-tip]:focus::after {
+      opacity: 1;
+    }
+
+    .tier-hint {
+      font-size: 14px;
+      color: #6b7290;
+      margin-top: 12px;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Sans+3:wght@400;700&display=swap");
+    :root {
+      --navy: #222f61; --navy-dark: #161f45; --gold: #f4d15a; --text: #3d4352;
+      --grey-bg: #f3f4f7; --line: #d9dce6; --white: #ffffff;
+      --heading-font: "League Gothic", "Arial Narrow", sans-serif;
+      --body-font: "Source Sans 3", Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--grey-bg); color: var(--text); font-family: var(--body-font); font-size: 18px; line-height: 1.6; }
+    h2 { font-family: var(--heading-font); font-weight: 400; text-transform: uppercase; line-height: 1; color: var(--white); font-size: 38px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .title-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; background: var(--navy); padding: 14px 24px; margin-bottom: 40px; }
+    .tag { display: inline-block; background: var(--gold); color: var(--navy); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 5px 10px; }
+
+

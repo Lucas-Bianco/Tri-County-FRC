@@ -148,17 +148,16 @@
   </script>
      <main>
 
-      <!-- Page header -->
       <section class="section-dark page-header">
         <div class="container">
           <span class="tag">2027 Rookie Season</span>
           <h1>Become a Sponsor</h1>
-          <p class="page-intro">Help vocational students design, build, and program a competition robot, and help us take it as far as it can go.</p>
+          <p class="page-intro">Help vocational students design, build, and program a competition robot, and take it as far as it can go.</p>
         </div>
       </section>
 
 
-      <!-- Why support us -->
+       <!-- Why support us -->
       <section class="section">
         <div class="container">
           <div class="title-bar">
@@ -177,69 +176,108 @@
       </section>
 
 
-      <!-- Tiers: highest first. Keep each list short. -->
-      <section class="section section-grey">
-        <div class="container">
-          <div class="title-bar">
-            <span class="tag">Levels</span>
-            <h2>Sponsor Tiers</h2>
-          </div>
 
-          <div class="card-grid">
 
-            <div class="card tier tier-featured">
-              <h3>Title</h3>
-              <p class="tier-price">$3,000+</p>
-              <ul class="list">
-                <li>Largest logo on the robot, visible from multiple sides</li>
-                <li>Logo on all team apparel</li>
-                <li>Logo on team banner and pit display</li>
-                <li>Logo on our homepage and social media bios</li>
-                <li>Shoutout in every competition post</li>
-                <li>Students can present to your company</li>
-                <li>Thank you letter and impact report</li>
-              </ul>
-            </div>
 
-            <div class="card tier">
-              <h3>Gold</h3>
-              <p class="tier-price">$1,500 &ndash; $2,999</p>
-              <ul class="list">
-                <li>Large logo on the robot</li>
-                <li>Logo on team shirts and hoodies</li>
-                <li>Logo on team banner and pit display</li>
-                <li>Top logo placement on our sponsors page</li>
-                <li>Mentions in competition-day posts</li>
-                <li>Thank you letter and impact report</li>
-              </ul>
-            </div>
 
-            <div class="card tier">
-              <h3>Silver</h3>
-              <p class="tier-price">$500 &ndash; $1,499</p>
-              <ul class="list">
-                <li>Medium logo on the robot</li>
-                <li>Logo on pit banner</li>
-                <li>Logo on our sponsors page</li>
-                <li>Mention in season wrap-up post</li>
-                <li>Thank you card from students</li>
-              </ul>
-            </div>
+      <!--Tiers-->
+      <section class="section">
+    <div class="container">
+      <div class="title-bar">
+        <span class="tag">Compare</span>
+        <h2>Sponsor Tiers</h2>
+      </div>
 
-            <div class="card tier">
-              <h3>Bronze</h3>
-              <p class="tier-price">$100 &ndash; $499</p>
-              <ul class="list">
-                <li>Small logo on the robot (about 3&times;4&Prime;)</li>
-                <li>Name on pit banner</li>
-                <li>Name on our sponsors page</li>
-                <li>Group thank you post at season end</li>
-              </ul>
-            </div>
+      <!-- Budget slider: picks the matching tier column -->
+      <div class="tier-picker">
+        <label for="tier-amount">How much are you thinking of giving?</label>
+        <input type="range" id="tier-amount" min="100" max="5000" step="50" value="500">
+        <p class="tier-result" id="tier-result"></p>
+      </div>
 
-          </div>
-        </div>
-      </section>
+      <div class="tier-chart-wrap">
+        <table class="tier-chart" id="tier-chart">
+          <thead>
+            <tr>
+              <th scope="col">Benefit</th>
+              <th scope="col">Bronze<span>$100 &ndash; $499</span></th>
+              <th scope="col">Silver<span>$500 &ndash; $1,499</span></th>
+              <th scope="col">Gold<span>$1,500 &ndash; $2,999</span></th>
+              <th scope="col">Title<span>$3,000+</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Logo on robot</th>
+              <td tabindex="0" data-tip="About 3 x 4 inches">Small</td>
+              <td tabindex="0" data-tip="TODO: add size">Medium</td>
+              <td tabindex="0" data-tip="About 8 x 12 inches">Large</td>
+              <td tabindex="0" data-tip="Our biggest placement, visible from multiple sides of the robot">Largest</td>
+            </tr>
+            <tr>
+              <th scope="row">Website</th>
+              <td>Name on sponsors page</td>
+              <td>Logo on sponsors page</td>
+              <td>Top logo placement</td>
+              <td tabindex="0" data-tip="Your logo on our homepage plus our social media bios">Homepage logo</td>
+            </tr>
+            <tr>
+              <th scope="row">Pit banner</th>
+              <td>Name</td>
+              <td>Logo</td>
+              <td tabindex="0" data-tip="The pit is our workspace at competitions, where judges, teams, and families stop by">Logo + pit display</td>
+              <td tabindex="0" data-tip="The pit is our workspace at competitions, where judges, teams, and families stop by">Logo + pit display</td>
+            </tr>
+            <tr>
+              <th scope="row">Team apparel</th>
+              <td class="no">&mdash;</td>
+              <td class="no">&mdash;</td>
+              <td>Shirts &amp; hoodies</td>
+              <td>All apparel</td>
+            </tr>
+            <tr>
+              <th scope="row">Social media</th>
+              <td>Group thank you</td>
+              <td>Season wrap-up</td>
+              <td>Competition days</td>
+              <td>Every competition post</td>
+            </tr>
+            <tr>
+              <th scope="row">Thank you</th>
+              <td class="no">&mdash;</td>
+              <td>Card from students</td>
+              <td tabindex="0" data-tip="A one-page summary of our season and what your support built">Letter + impact report</td>
+              <td tabindex="0" data-tip="A one-page summary of our season and what your support built">Letter + impact report</td>
+            </tr>
+            <tr>
+              <th scope="row">Student presentation</th>
+              <td class="no">&mdash;</td>
+              <td class="no">&mdash;</td>
+              <td class="no">&mdash;</td>
+              <td class="yes" tabindex="0" data-tip="Students can visit and present the robot at your company">&check;</td>
+            </tr>
+            <tr>
+              <th scope="row">Visit build season &amp; watch us compete</th>
+              <td class="yes">&check;</td>
+              <td class="yes">&check;</td>
+              <td class="yes">&check;</td>
+              <td class="yes">&check;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tier-hint">Hover a column to compare, or click a tier to highlight it. Underlined items have more info.</p>
+    </div>
+  </section>
+
+    </main>
+
+
+
+     
+
+
+      
 
 
       <!-- Other ways to give + FAQ -->
@@ -253,7 +291,7 @@
           <div class="two-columns tier-faq">
             <div>
               <h3>Can I give something other than money?</h3>
-              <p>Yes! We accept parts, tools, materials, and food for long build days. Donations count toward a tier based on their value.</p>
+              <p>Yes! We accept parts, tools, materials, and food for long build days. In-kind donations count toward a tier based on their value.</p>
             </div>
             <div>
               <h3>Is my donation tax deductible?</h3>
@@ -271,14 +309,129 @@
           <h2>Ready to Sponsor?</h2>
           <p>Email us and we'll send our sponsor packet and answer any questions.</p>
           <div class="button-row">
-            <a class="button button-gold" href="mailto:tcroboticssocial@gmail.com">Email the Team</a>
+            <a class="button button-gold" href="mailto:tcroboticssocial@gmail.com?subject=Sponsoring%20Tri-County%20FRC">Email the Team</a>
             <a class="button" href="sponsors.html">See Our Sponsors</a>
           </div>
         </div>
       </section>
 
     </main>
-
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    // ===========================
+    // TIER CHART
+    // ===========================
+    const chart = document.getElementById('tier-chart')
+    const slider = document.getElementById('tier-amount')
+    const result = document.getElementById('tier-result')
+
+    // Tier minimums, in the same order as the table columns (column 1 = Bronze)
+    const tiers = [
+      { name: 'Bronze', min: 100 },
+      { name: 'Silver', min: 500 },
+      { name: 'Gold', min: 1500 },
+      { name: 'Title', min: 3000 }
+    ]
+
+    // Add or remove a class on every cell in one column
+    function markColumn(col, className, on) {
+      chart.querySelectorAll('tr').forEach(function (row) {
+        const cell = row.children[col]
+        if (cell) cell.classList.toggle(className, on)
+      })
+    }
+
+    // Highlight one tier column and fade the others
+    function selectColumn(col) {
+      for (let i = 1; i <= tiers.length; i++) {
+        markColumn(i, 'col-selected', i === col)
+      }
+      chart.classList.toggle('has-selection', col > 0)
+    }
+
+    // Hover: light highlight on the whole column
+    chart.addEventListener('mouseover', function (e) {
+      const cell = e.target.closest('td, thead th')
+      if (cell && cell.cellIndex > 0) markColumn(cell.cellIndex, 'col-hover', true)
+    })
+    chart.addEventListener('mouseout', function (e) {
+      const cell = e.target.closest('td, thead th')
+      if (cell && cell.cellIndex > 0) markColumn(cell.cellIndex, 'col-hover', false)
+    })
+
+    // Click a tier name: select it and move the slider to that tier's minimum
+    chart.querySelectorAll('thead th').forEach(function (th) {
+      th.addEventListener('click', function () {
+        if (th.cellIndex === 0) return
+        slider.value = tiers[th.cellIndex - 1].min
+        updateSlider()
+      })
+    })
+
+    // Slider: find the highest tier the amount reaches
+    function updateSlider() {
+      const amount = Number(slider.value)
+      let col = 0
+      tiers.forEach(function (tier, i) {
+        if (amount >= tier.min) col = i + 1
+      })
+
+      const next = tiers[col]   // the tier above, if there is one
+      let text = '$' + amount.toLocaleString() + ' makes you a <strong>' + tiers[col - 1].name + ' Sponsor</strong>.'
+      if (next) {
+        text += ' $' + (next.min - amount).toLocaleString() + ' more reaches ' + next.name + '.'
+      }
+      result.innerHTML = text
+      selectColumn(col)
+    }
+
+    slider.addEventListener('input', updateSlider)
+    updateSlider()
+  </script>
 </body>
 </html>
